@@ -1,5 +1,4 @@
 #include<stdio.h>
-void palindrome(char[20]);
 int main(){
 	char p[20];
 	int i,j,length=1,flag=0;
@@ -10,11 +9,11 @@ int main(){
 	length=i;
 	}
 	char q[length];
-	for(i=0;i!='\0';i++)
+	for(i=0;i<=length;i++)
 	{
 		q[i]=p[length-i];
 		}
-	printf("%s",q);
+	printf("the reverse is %s\n",q);
 	for(i=0;i<=length;i++)
 	{
 		if(q[i]!=p[i])
@@ -22,7 +21,8 @@ int main(){
 	}
 	if(flag==0)
 	printf("the given string is a palindrome");
-	
+	else
+	printf("not a palindrome");
 	return 0;
 	}
 	
